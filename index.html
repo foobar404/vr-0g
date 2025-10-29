@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="sky" src="./assets/sky.jpg" alt="">
+        </a-assets>
+
+        <a-sky src="#sky"></a-sky>
+
+        <a-entity id="rig" origin>
+            <a-camera wasd-plus look-controls></a-camera>
+            <a-entity oculus-touch-controls="hand:left;"
+                fly="ascendEvent:gripchanged; accelerateEvent: triggerchanged"></a-entity>
+            <a-entity oculus-touch-controls="hand:right;" snap-turn></a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>
